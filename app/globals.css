@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 51, 51, 51;
+  --background-rgb: 255, 255, 255;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-rgb));
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-lg sm:text-xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-soft transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark focus:ring-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-base-darkgray hover:bg-secondary-dark focus:ring-secondary;
+  }
+  
+  .btn-mineral-amber {
+    @apply bg-mineral-amber text-white hover:bg-mineral-amber-dark focus:ring-mineral-amber;
+  }
+  
+  .btn-outline-white {
+    @apply border-white text-white hover:bg-white hover:text-primary focus:ring-white;
+  }
+
+  .container-section {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-center mb-8 sm:mb-12;
+  }
+
+  .section-title h2 {
+    @apply mb-3 sm:mb-4;
+  }
+
+  .shadow-soft {
+    @apply shadow-md shadow-gray-200/50;
+  }
+
+  .shadow-elevated {
+    @apply shadow-lg shadow-gray-200/60;
+  }
+
+  .shadow-card {
+    @apply shadow-xl shadow-gray-200/70;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary to-primary-dark;
+  }
+
+  .feature-card {
+    @apply bg-white p-4 sm:p-6 rounded-xl shadow-soft border border-gray-100 hover:shadow-card transition-all duration-300;
+  }
+
+  .stat-card {
+    @apply bg-white p-3 sm:p-4 rounded-xl shadow-soft text-center;
+  }
+
+  .stat-number {
+    @apply text-2xl sm:text-3xl font-bold text-primary mb-1;
+  }
+
+  .stat-label {
+    @apply text-xs sm:text-sm text-gray-600;
+  }
+
+  .mineral-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white bg-opacity-80 border border-white border-opacity-20;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .container-section {
+      @apply px-4;
+    }
+    
+    .btn {
+      @apply text-sm;
+    }
+  }
+}
+
+/* Fix for iOS 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
