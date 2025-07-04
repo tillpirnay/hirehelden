@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import ContactSection from '../components/ContactSection';
+import ErstgespraechButton from '../components/ErstgespraechButton';
 
 export default function BewerberPage() {
   return (
@@ -18,9 +19,11 @@ export default function BewerberPage() {
               <p className="text-xl sm:text-2xl mb-8">
                 Dein Experte für nachhaltige Jobvermittlung
               </p>
-              <a href="#kontakt" className="btn btn-white">
-                Jetzt bewerben
-              </a>
+              <ErstgespraechButton 
+                variant="white" 
+                size="lg" 
+                className="transform hover:scale-105 w-full sm:w-auto"
+              />
             </div>
             <div className="hidden lg:block relative h-96">
               <div className="absolute inset-0 rounded-xl overflow-hidden">
