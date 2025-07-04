@@ -1,109 +1,84 @@
-'use client';
+import React from 'react';
 
-export default function AGB() {
+export default function AGBPage() {
   return (
-    <div className="container-section">
-      <h1 className="mb-8">Allgemeine Geschäftsbedingungen</h1>
-      
-      <div className="space-y-8">
-        <section>
-          <h2 className="text-2xl font-bold mb-4">1. Geltungsbereich</h2>
-          <p>1.1 Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Verträge zwischen der Kirsty GmbH, Schanzenstrasse 23, 51063 Köln (nachfolgend "HireHelden" oder "wir") und ihren Kunden (nachfolgend "Kunde" oder "Sie") über die Erbringung von Dienstleistungen im Bereich der Personalgewinnung und -vermittlung.</p>
-          <p>1.2 Abweichende Bedingungen des Kunden werden nicht anerkannt, es sei denn, HireHelden stimmt ihrer Geltung ausdrücklich schriftlich zu.</p>
-          <p>1.3 Diese AGB gelten ausschließlich gegenüber Unternehmern im Sinne des § 14 BGB.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">2. Vertragsgegenstand</h2>
-          <p>2.1 HireHelden bietet Dienstleistungen zur Optimierung und Digitalisierung des gesamten Employee Lifecycles sowie die Vermittlung von Fach- und Führungskräften an. Der genaue Leistungsumfang ergibt sich aus der jeweiligen Leistungsbeschreibung, dem Angebot oder der Auftragsbestätigung.</p>
-          <p>2.2 Die Leistungen von HireHelden können unter anderem umfassen:</p>
-          <ul className="list-disc pl-6 mt-2 mb-4">
-            <li>Entwicklung und Umsetzung von Strategien zur Personalgewinnung</li>
-            <li>Erstellung und Schaltung von Stellenanzeigen</li>
-            <li>Vorqualifizierung von Bewerbern</li>
-            <li>Beratung zur Arbeitgebermarkenbildung</li>
-            <li>Bereitstellung digitaler Tools zur Personalverwaltung</li>
-            <li>Maßnahmen zur Mitarbeiterbindung</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">3. Vertragsschluss</h2>
-          <p>3.1 Angebote von HireHelden sind freibleibend und unverbindlich, sofern sie nicht ausdrücklich als verbindlich gekennzeichnet sind.</p>
-          <p>3.2 Ein Vertrag kommt erst durch die schriftliche Auftragsbestätigung von HireHelden oder durch die tatsächliche Leistungserbringung zustande.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">4. Leistungserbringung</h2>
-          <p>4.1 HireHelden erbringt die vereinbarten Leistungen nach bestem Wissen und Gewissen und unter Beachtung der branchenüblichen Sorgfalt.</p>
-          <p>4.2 HireHelden ist berechtigt, zur Erfüllung der vertraglichen Verpflichtungen qualifizierte Dritte als Erfüllungsgehilfen einzusetzen.</p>
-          <p>4.3 HireHelden ist zu Teilleistungen berechtigt, sofern diese für den Kunden zumutbar sind.</p>
-          <p>4.4 Termine und Fristen sind unverbindlich, sofern nicht ausdrücklich schriftlich etwas anderes vereinbart wurde.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">5. Mitwirkungspflichten des Kunden</h2>
-          <p>5.1 Der Kunde ist verpflichtet, HireHelden bei der Erbringung der vereinbarten Leistungen angemessen zu unterstützen und insbesondere alle erforderlichen Informationen und Unterlagen rechtzeitig zur Verfügung zu stellen.</p>
-          <p>5.2 Der Kunde benennt einen qualifizierten Ansprechpartner, der befugt ist, die zur Vertragsdurchführung erforderlichen Entscheidungen zu treffen.</p>
-          <p>5.3 Der Kunde ist für die Richtigkeit und Vollständigkeit der von ihm bereitgestellten Informationen verantwortlich. Dies gilt insbesondere für Angaben zu Stellenprofilen, Anforderungen an Bewerber und Arbeitsbedingungen.</p>
-          <p>5.4 Kommt der Kunde seinen Mitwirkungspflichten nicht oder nicht rechtzeitig nach, so sind die hieraus entstehenden Verzögerungen und Mehrkosten vom Kunden zu tragen.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">6. Vergütung und Zahlungsbedingungen</h2>
-          <p>6.1 Die Vergütung richtet sich nach der jeweils gültigen Preisliste von HireHelden oder nach den individuell getroffenen Vereinbarungen.</p>
-          <p>6.2 Alle Preise verstehen sich zuzüglich der gesetzlichen Mehrwertsteuer.</p>
-          <p>6.3 Rechnungen sind innerhalb von 14 Tagen nach Rechnungsstellung ohne Abzug zur Zahlung fällig, sofern nicht anders vereinbart.</p>
-          <p>6.4 Bei Zahlungsverzug ist HireHelden berechtigt, Verzugszinsen in Höhe von 9 Prozentpunkten über dem Basiszinssatz zu berechnen. Die Geltendmachung eines weiteren Verzugsschadens bleibt vorbehalten.</p>
-          <p>6.5 HireHelden behält sich vor, bei Vertragsabschluss eine angemessene Vorauszahlung zu verlangen.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">7. Erfolgsgarantie und Rückerstattung</h2>
-          <p>7.1 Soweit HireHelden eine Erfolgsgarantie gewährt, gelten hierfür die in der jeweiligen Leistungsbeschreibung oder im Angebot festgelegten Bedingungen.</p>
-          <p>7.2 Ansprüche auf Rückerstattung setzen voraus, dass der Kunde seinen vertraglichen Mitwirkungspflichten vollständig nachgekommen ist und die vereinbarten Prozesse eingehalten hat.</p>
-          <p>7.3 Die Beweislast für das Vorliegen der Voraussetzungen einer Rückerstattung trägt der Kunde.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">8. Vertragslaufzeit und Kündigung</h2>
-          <p>8.1 Die Vertragslaufzeit richtet sich nach den individuell getroffenen Vereinbarungen. Sofern nicht anders vereinbart, beträgt die Mindestvertragslaufzeit 3 Monate.</p>
-          <p>8.2 Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.</p>
-          <p>8.3 Jede Kündigung bedarf der Schriftform.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">9. Haftung</h2>
-          <p>9.1 HireHelden haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, die auf einer vorsätzlichen oder fahrlässigen Pflichtverletzung von HireHelden, seinen gesetzlichen Vertretern oder Erfüllungsgehilfen beruhen.</p>
-          <p>9.2 Für sonstige Schäden haftet HireHelden nur, wenn sie auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung von HireHelden, seinen gesetzlichen Vertretern oder Erfüllungsgehilfen beruhen.</p>
-          <p>9.3 Die Haftung für die leicht fahrlässige Verletzung wesentlicher Vertragspflichten (Kardinalpflichten) ist der Höhe nach begrenzt auf den vertragstypisch vorhersehbaren Schaden. Wesentliche Vertragspflichten sind solche, deren Erfüllung die ordnungsgemäße Durchführung des Vertrags überhaupt erst ermöglicht und auf deren Einhaltung der Vertragspartner regelmäßig vertrauen darf.</p>
-          <p>9.4 HireHelden übernimmt keine Gewähr für die Eignung der vermittelten Kandidaten für die zu besetzende Position oder für deren Verbleib beim Kunden. Die Auswahlentscheidung trifft allein der Kunde.</p>
-          <p>9.5 Die vorstehenden Haftungsbeschränkungen gelten nicht für Ansprüche nach dem Produkthaftungsgesetz sowie bei Übernahme ausdrücklicher Garantien durch HireHelden.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">10. Datenschutz und Vertraulichkeit</h2>
-          <p>10.1 Die Parteien verpflichten sich, alle im Rahmen der Vertragsbeziehung erlangten vertraulichen Informationen geheim zu halten und nur für die Zwecke des Vertrages zu verwenden.</p>
-          <p>10.2 HireHelden verarbeitet personenbezogene Daten im Einklang mit den geltenden datenschutzrechtlichen Bestimmungen, insbesondere der DSGVO und dem BDSG. Nähere Informationen hierzu finden sich in der Datenschutzerklärung von HireHelden.</p>
-          <p>10.3 Der Kunde stellt sicher, dass er alle erforderlichen Einwilligungen und Berechtigungen für die Übermittlung personenbezogener Daten an HireHelden eingeholt hat.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">11. Urheberrechte und Nutzungsrechte</h2>
-          <p>11.1 Alle von HireHelden erstellten Unterlagen, Konzepte, Strategien und sonstigen Arbeitsergebnisse unterliegen dem Urheberrecht und verbleiben im Eigentum von HireHelden.</p>
-          <p>11.2 Der Kunde erhält an den Arbeitsergebnissen ein einfaches, nicht übertragbares Nutzungsrecht für eigene Zwecke. Eine weitergehende Nutzung, insbesondere die Weitergabe an Dritte, bedarf der vorherigen schriftlichen Zustimmung von HireHelden.</p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">12. Schlussbestimmungen</h2>
-          <p>12.1 Erfüllungsort und ausschließlicher Gerichtsstand für alle Streitigkeiten aus und im Zusammenhang mit diesem Vertrag ist Köln, sofern der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist.</p>
-          <p>12.2 Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG).</p>
-          <p>12.3 Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, so wird dadurch die Wirksamkeit der übrigen Bestimmungen nicht berührt. Die Parteien verpflichten sich, unwirksame Bestimmungen durch solche zu ersetzen, die dem wirtschaftlichen Zweck der unwirksamen Regelung am nächsten kommen.</p>
-          <p>12.4 Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform. Dies gilt auch für die Änderung dieser Schriftformklausel.</p>
+    <main className="bg-white pt-24 pb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-base-darkgray">Allgemeine Geschäftsbedingungen</h1>
+        
+        <div className="prose prose-lg max-w-none">
+          <p className="text-lg mb-6">
+            Diese Allgemeinen Geschäftsbedingungen gelten zwischen dem Auftraggeber, nachfolgend bezeichnet als „Auftraggeber" 
+            und HireHelden, eine Marke der Kirsty GmbH, Schanzenstraße 23, 51063 Köln, nachfolgend bezeichnet als „HireHelden".
+          </p>
           
-          <p className="mt-8">Stand: Mai 2024</p>
-        </section>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">1. Leistungsumfang & Laufzeit</h2>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>HireHelden ist spezialisiert auf die Gewinnung von Leads durch Digitale-Performance-Kampagnen und digitaler Produkte.</li>
+            <li>Ziel der Zusammenarbeit ist die Besetzung von Vakanzen bei Auftraggeber mit Personen, die durch HireHelden vorgeschlagen werden – nachfolgend bezeichnet als „HireHelden Kandidat*in".</li>
+            <li>Im Rahmen der Zusammenarbeit übernimmt HireHelden die Erstellung einer Bedarfsanalyse, die Suche und Ansprache, die Durchführung von Interviews, die Evaluierung, die Vorstellung & Terminkoordination.</li>
+            <li>Die Parteien sind sich darüber einig, dass bei der Erbringung der vereinbarten Leistungen HireHelden dem Auftraggeber gegenüber ausdrücklich keinen konkreten Erfolg schuldet.</li>
+            <li>Plattformen z.B. Facebook und Instagram, können im Einzelfall Werbekampagnen des Anbieters, ohne Nennung von Gründen aussetzen oder temporär sperren. HireHelden hat hierauf keinen Einfluss, bemüht sich aber die Sperrung kurzfristig aufzuheben.</li>
+            <li>HireHelden ist berechtigt, sich zur Erfüllung einzelner vertraglichen Pflichten der Hilfe Dritter oder Subunternehmer zu bedienen.</li>
+            <li>Die Zusammenarbeit wird auf unbestimmte Zeit geschlossen und kann mit einer Kündigungsfrist von vier Wochen von beiden Parteien gekündigt werden. Laufende Bewerbungsprozesse bleiben von einer Kündigung unberührt.</li>
+          </ol>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">2. HireHelden Kandidat*in</h2>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Ein HireHelden Kandidat*in kann aus den unterschiedlichsten Aktivitäten bzw. Quellen von HireHelden hervorgehen (z.B. gezielte Direktansprachen, Social Media Anzeigen, HireHelden Datenbank, HireHelden Netzwerk) und werden Auftraggeber mittels Kandidatenprofil vorgeschlagen.</li>
+            <li>HireHelden schlägt ausschließlich Personen vor, die ihr Einverständnis zur Vorstellung bei Auftraggeber gegeben haben. Sobald HireHelden eine solche Person bei Auftraggeber vorgeschlagen hat, gilt diese als HireHelden Kandidat*in.</li>
+            <li>Sollte Auftraggeber eine direkte Bewerbung von einer bereits durch HireHelden vorgestellten Person erhalten, gilt diese Person weiterhin als HireHelden Kandidat*in, wenn die Bewerbung zuerst durch HireHelden übermittelt wurde. Sollte HireHelden Kandidat*in bereits früher in Kontakt zu Auftraggeber gestanden haben, jedoch vor Projektstart von Auftraggeber in Bezug auf die zu besetzende Position nicht interviewt worden sein, gilt diese Person weiter als HireHelden Kandidat*in.</li>
+            <li>Sollte der HireHelden Kandidat*in bereits einen aktiven Bewerbungsprozess gestartet haben, erhält HireHelden für diesen Kandidat*in kein Honorar. Ein aktiver Bewerbungsprozess ist gestartet, sobald ein Kandidat von Auftraggeber zu einem Interview eingeladen wurde.</li>
+            <li>Sollte eine vorgestellte Person einen früheren Bewerbungsprozess absolviert haben, es aber nicht zu einer Einstellung kam, zählt er dennoch als HireHelden Kandidat*in.</li>
+          </ol>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">3. Gebühren</h2>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Nach Auftragserteilung berechnet HireHelden ein Einrichtungsgebühr in Höhe von EUR 999,00 pro Suchauftrag. In der Einrichtungsgebühr sind die Kosten für die Durchführung der Bedarfsanalyse, der Erstellung von Ads und Landing Pages inkludiert.</li>
+            <li>Der Auftraggeber bestimmt das Budget der Werbekosten, HireHelden rechnet das Budget mit einer Handling Fee von 10% monatlich mit dem Auftraggeber ab.</li>
+          </ol>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">4. Erfolgshonorar</h2>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>HireHelden berechnet ein Erfolgshonorar, sobald ein HireHelden Kandidat*in innerhalb von 12 Monaten ab der Vorstellung bzw. innerhalb von 12 Monaten ab Erteilung einer Absage durch Auftraggeber einen Vertrag mit Auftraggeber oder einem mit Auftraggeber verbundenen Unternehmen unterschreibt.</li>
+            <li>Das Erfolgshonorar beträgt 18 % des zwischen Auftraggeber und HireHelden Kandidat*in vereinbarten Bruttojahreszielgehaltes. Das Bruttojahreszielgehalt setzt sich aus Fixgehalt, variablem Gehalt, Boni, Tantiemen, Urlaubs- und Weihnachtsgeld zusammen. Ein Firmenwagen wird mit einem Wert von EUR 6.000,00 bewertet.</li>
+            <li>Tritt der HireHelden Kandidat*in eine andere als die ursprünglich vorgestellte Position an, erwirbt HireHelden ebenfalls einen Honoraranspruch.</li>
+          </ol>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">5. Zahlungsbedingungen</h2>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>In Rechnung gestellte Beträge sind innerhalb 7 Tagen nach Rechnungsstellung zu zahlen.</li>
+            <li>Die Honorare werden zuzüglich der jeweils in Deutschland geltenden MwSt. berechnet.</li>
+          </ol>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">6. Datenschutz & Vertraulichkeit</h2>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Alle Bewerberunterlagen sind vertraulich zu behandeln und bei Nichtgebrauch zu vernichten und von elektronischen Datenträgern zu entfernen. Eine Weitergabe an Dritte, sowie das Erstellen von Kopien für den eigenen Gebrauch ist untersagt. Auftraggeber verpflichtet sich darüber hinaus, über alle persönlichen und beruflichen Verhältnisse der präsentierten Kandidaten Stillschweigen zu bewahren.</li>
+            <li>Auftraggeber liefert für die Bedarfsanalyse mündlich oder schriftlich die erforderlichen Kandidatenanforderungen. HireHelden behandelt diese von Auftraggeber zur Verfügung gestellten Informationen vertraulich und verwendet diese nur im Rahmen der Stellenbesetzung.</li>
+            <li>Zur Wahrung des Persönlichkeitsschutzes der HireHelden Kandidat*in, dürfen CV-Referenzen nur nach Einzelabsprache mit HireHelden eingeholt werden.</li>
+            <li>HireHelden ist es erlaubt, den Auftraggeber mit seinem Logo als Referenz zu nennen und auf der Unternehmenswebsite zu publizieren.</li>
+          </ol>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Kandidaten-Exklusivität & Kundenschutz</h2>
+          <p className="mb-4">
+            HireHelden Kandidat*in, die auf Basis der gültigen Zusammenarbeit zu Auftraggeber vermittelt wurden, werden seitens HireHelden für die Dauer der Anstellung bei Auftraggeber nicht mehr proaktiv für andere Vakanzen angesprochen.
+          </p>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">8. Haftung</h2>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>HireHelden haftet grundsätzlich nicht für Umstände oder Schäden, die HireHelden Kandidat*in in Ausübung oder anlässlich seiner Tätigkeit verursacht. Es wird keine Gewährleistung übernommen, insbesondere wird keine Gewährleistung für die Arbeitsqualität, die Arbeitsweise und Belastbarkeit des HireHelden Kandidat*in oder dessen persönliche Zuverlässigkeit übernommen. Regress- und sonstige Ersatzansprüche des Auftraggebers sind ausgeschlossen.</li>
+            <li>Für Schäden, die aus Verstößen gegen das Allgemeine Gleichbehandlungsgesetz resultieren, haftet HireHelden nur soweit, wie die Verstöße auf vorsätzlichem oder grob fahrlässigem Handeln von HireHelden oder ihren Erfüllungsgehilfen beruhen.</li>
+          </ol>
+          
+          <h2 className="text-2xl font-semibold mt-8 mb-4">9. Schlussbestimmungen</h2>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Sollten einzelne Teile dieser Geschäftsbedingungen unwirksam oder nichtig sein, so berührt dies im Zweifel nicht die Wirksamkeit der übrigen Bestimmungen. Die Vertragspartner ersetzen die unwirksame oder nichtige Bestimmung durch eine wirksame Bestimmung, die dem Vertragszweck entspricht. Im Falle von Unstimmigkeiten zwischen Auftraggeber und HireHelden streben beide Parteien an, diese Unstimmigkeiten wohlwollend und in bester Absicht einvernehmlich beizulegen.</li>
+            <li>Für diese Geschäftsbedingungen gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts und der hierauf verweisenden Normen des internationalen Privatrechts. Für alle Streitigkeiten aus oder in Zusammenhang mit diesem Vertrag wird als Gerichtsstand Köln vereinbart.</li>
+          </ol>
+          
+          <p className="mt-10 text-right text-gray-600">Stand: Köln, Juli 2025</p>
+        </div>
       </div>
-    </div>
+    </main>
   );
 } 
