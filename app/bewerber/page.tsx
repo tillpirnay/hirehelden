@@ -10,16 +10,30 @@ export default function BewerberPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-16 sm:py-20 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Finde deinen Traumjob mit HireHelden
-            </h1>
-            <p className="text-xl sm:text-2xl mb-8">
-              Dein Experte für nachhaltige Jobvermittlung
-            </p>
-            <a href="#kontakt" className="btn btn-white">
-              Jetzt bewerben
-            </a>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                Finde deinen Traumjob mit HireHelden
+              </h1>
+              <p className="text-xl sm:text-2xl mb-8">
+                Dein Experte für nachhaltige Jobvermittlung
+              </p>
+              <a href="#kontakt" className="btn btn-white">
+                Jetzt bewerben
+              </a>
+            </div>
+            <div className="hidden lg:block relative h-96">
+              <div className="absolute inset-0 rounded-xl overflow-hidden">
+                <Image 
+                  src="/images/u2123468582_Two_European_professionals_in_a_bright_modern_off_f0fa60b9-731b-4c8c-8b90-d0a91e4fdee5_2.png" 
+                  alt="Professionelle Karriereberatung" 
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
