@@ -31,6 +31,7 @@ const navLinks = [
   { name: "Referenzen", href: "/referenzen" },
   { name: "Über uns", href: "/ueber-uns" },
   { name: "Für Unternehmen", href: "/kunden" },
+  { name: "Für Bewerber", href: "/bewerber" },
 ];
 
 export const metadata: Metadata = {
@@ -74,6 +75,7 @@ export default function RootLayout({
                   <Link href="/referenzen" className="text-base-darkgray hover:text-primary font-medium transition-colors duration-200">Referenzen</Link>
                   <Link href="/ueber-uns" className="text-base-darkgray hover:text-primary font-medium transition-colors duration-200">Über uns</Link>
                   <Link href="/kunden" className="text-base-darkgray hover:text-primary font-medium transition-colors duration-200">Für Unternehmen</Link>
+                  <Link href="/bewerber" className="text-base-darkgray hover:text-primary font-medium transition-colors duration-200">Für Bewerber</Link>
                 </nav>
                 
                 <div className="hidden md:flex">
@@ -120,6 +122,7 @@ export default function RootLayout({
                     <li><Link href="/referenzen" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Referenzen</Link></li>
                     <li><Link href="/ueber-uns" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Über uns</Link></li>
                     <li><Link href="/kunden" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Für Unternehmen</Link></li>
+                    <li><Link href="/bewerber" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Für Bewerber</Link></li>
                     <li><Link href="/#contact" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Kontakt</Link></li>
                   </ul>
                 </div>
