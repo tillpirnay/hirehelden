@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-const RECIPIENTS = ['t.pirnay85@gmail.com', 'felix.schulze@why-worry.eu'];
+const RECIPIENTS = ['t.pirnay85@googlemail.com'];
+const CC_RECIPIENT = 'felix.schulze@why-worry.eu';
 
 export async function POST(request: Request) {
   try {
@@ -24,7 +25,9 @@ export async function POST(request: Request) {
 
     // Create transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true, // true for 465, false for other ports
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_APP_PASSWORD,
@@ -43,6 +46,7 @@ export async function POST(request: Request) {
     const mailOptions = {
       from: process.env.GMAIL_USER,
       to: RECIPIENTS.join(', '),
+      cc: CC_RECIPIENT,
       subject: `Neue Kontaktanfrage von ${name} - ${company}`,
       text: `
 Name: ${name}

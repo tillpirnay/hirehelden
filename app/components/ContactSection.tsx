@@ -39,7 +39,16 @@ export default function ContactSection() {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        let errorText = 'Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.';
+        try {
+          const data = await response.json();
+          if (data?.error) {
+            errorText = data.error as string;
+          }
+        } catch (_) {
+          /* ignore json parsing errors */
+        }
+        throw new Error(errorText);
       }
 
       setStatus('success');
@@ -54,7 +63,11 @@ export default function ContactSection() {
       });
     } catch (error) {
       setStatus('error');
-      setErrorMessage('Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.');
+      if (error instanceof Error) {
+        setErrorMessage(error.message);
+      } else {
+        setErrorMessage('Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.');
+      }
     }
   };
 
