@@ -119,14 +119,13 @@ export default function InvestitionPage() {
                 <div className="space-y-4 flex-grow">
                   <h4 className="font-semibold text-[#0A2540] mb-4">Folgendes ist inkludiert:</h4>
                   {[
-                    'Analysegespräch',
-                    'Telefonische Vorqualifizierung der Bewerbenden',
+                    'Erstanalysegespräch',
                     'Karriereseite',
                     'Erstellung einer professionellen Jobanzeige',
                     'Job-Landingpages',
                     'Social Media Ads für Performance Marketing',
-                    'Hosting',
-                    'Kosten für die Schaltung der Werbung auf Meta & Co. für die ersten 30 Tage inkludiert'
+                    'Telefonische Vorqualifizierung der Bewerbenden',
+                    'Werbekosten für die Schaltung der Werbung auf Meta & Co. für die ersten 30 Tage inkludiert'
                   ].map((item, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
@@ -230,12 +229,12 @@ export default function InvestitionPage() {
                   description: 'Dediziertes Karriereportal für eine optimale Candidate Experience und professionelle Bewerbungsabwicklung.',
                   icon: (
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   )
                 }
               ].map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-10 hover:shadow-lg transition-shadow duration-300 min-h-[280px] flex flex-col">
+                <div key={index} className="bg-gray-50 rounded-xl p-10 hover:shadow-lg transition-shadow duration-300 min-h-[320px] flex flex-col">
                   <div className="w-16 h-16 bg-[#0A2540] text-white rounded-full flex items-center justify-center mb-6">
                     {service.icon}
                   </div>

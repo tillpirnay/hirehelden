@@ -36,6 +36,7 @@ export default function AGBPage() {
           <ol className="list-decimal pl-6 space-y-2">
             <li>Nach Auftragserteilung berechnet HireHelden ein Einrichtungsgebühr in Höhe von EUR 999,00 pro Suchauftrag. In der Einrichtungsgebühr sind die Kosten für die Durchführung der Bedarfsanalyse, der Erstellung von Ads und Landing Pages inkludiert.</li>
             <li>Der Auftraggeber bestimmt das Budget der Werbekosten, HireHelden rechnet das Budget mit einer Handling Fee von 10% monatlich mit dem Auftraggeber ab.</li>
+            <li>Sollte der Vertrag nicht 3 Tage vor der 30-tägigen Laufzeit gekündigt werden, verlängert sich der Vertrag um weitere 30 Tage für einen Preis von 1.500,00€. Die bezahlten Werbeanzeigen laufen 30 Tage weiter.</li>
           </ol>
           
           <h2 className="text-2xl font-semibold mt-8 mb-4">4. Erfolgshonorar</h2>
