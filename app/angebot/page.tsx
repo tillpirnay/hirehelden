@@ -262,7 +262,15 @@ export default function InvestitionPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {branches.map((branch, index) => (
-                <div key={index} className="bg-white rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+                <div 
+                  key={index} 
+                  className="bg-white rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition-all duration-300 text-center cursor-pointer hover:bg-gray-50 hover:scale-105"
+                  onClick={() => {
+                    document.getElementById('kontakt')?.scrollIntoView({ 
+                      behavior: 'smooth' 
+                    });
+                  }}
+                >
                   <span className="text-[#0A2540] font-medium text-sm">{branch}</span>
                 </div>
               ))}
