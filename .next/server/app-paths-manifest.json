@@ -1,17 +1,17 @@
 {
   "/_not-found": "app/_not-found.js",
-  "/api/bedarfsanalyse/route": "app/api/bedarfsanalyse/route.js",
-  "/agb/page": "app/agb/page.js",
-  "/bedarfsanalyse/page": "app/bedarfsanalyse/page.js",
   "/angebot/page": "app/angebot/page.js",
-  "/api/contact/route": "app/api/contact/route.js",
+  "/agb/page": "app/agb/page.js",
+  "/api/bedarfsanalyse/route": "app/api/bedarfsanalyse/route.js",
   "/bewerber/page": "app/bewerber/page.js",
   "/erstgespraech/page": "app/erstgespraech/page.js",
-  "/datenschutz/page": "app/datenschutz/page.js",
-  "/kunden/page": "app/kunden/page.js",
-  "/impressum/page": "app/impressum/page.js",
-  "/page": "app/page.js",
+  "/api/contact/route": "app/api/contact/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/ueber-uns/page": "app/ueber-uns/page.js",
-  "/referenzen/page": "app/referenzen/page.js"
+  "/kunden/page": "app/kunden/page.js",
+  "/bedarfsanalyse/page": "app/bedarfsanalyse/page.js",
+  "/datenschutz/page": "app/datenschutz/page.js",
+  "/page": "app/page.js",
+  "/referenzen/page": "app/referenzen/page.js",
+  "/impressum/page": "app/impressum/page.js",
+  "/ueber-uns/page": "app/ueber-uns/page.js"
 }

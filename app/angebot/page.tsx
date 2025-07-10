@@ -234,7 +234,7 @@ export default function InvestitionPage() {
                   )
                 }
               ].map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-10 hover:shadow-lg transition-shadow duration-300 min-h-[320px] flex flex-col">
+                <div key={index} className="bg-gray-50 rounded-xl p-10 hover:shadow-lg transition-shadow duration-300 min-h-[380px] flex flex-col">
                   <div className="w-16 h-16 bg-[#0A2540] text-white rounded-full flex items-center justify-center mb-6">
                     {service.icon}
                   </div>
