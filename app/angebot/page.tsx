@@ -113,9 +113,9 @@ export default function InvestitionPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0A2540] mb-2">Setup-Kosten</h3>
-                  <div className="text-4xl font-bold text-[#0A2540] mb-2">1.500€</div>
-                  <p className="text-gray-600">je Position</p>
+                  <h3 className="text-2xl font-bold text-[#0A2540] mb-4">HireHelden Performance Paket</h3>
+                  <div className="text-xl font-bold text-[#0A2540] mb-1">1.500€</div>
+                  <p className="text-sm text-gray-600">je Position</p>
                 </div>
 
                 <div className="space-y-4">
