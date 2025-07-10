@@ -106,7 +106,7 @@ export default function InvestitionPage() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Setup Costs */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-t-4 border-[#0A2540]">
+              <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-t-4 border-[#0A2540] flex flex-col">
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-[#0A2540] text-white rounded-full mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,11 +114,9 @@ export default function InvestitionPage() {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-[#0A2540] mb-4">HireHelden Performance Paket</h3>
-                  <div className="text-xl font-bold text-[#0A2540] mb-1">1.500€</div>
-                  <p className="text-sm text-gray-600">je Position</p>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4 flex-grow">
                   <h4 className="font-semibold text-[#0A2540] mb-4">Folgendes ist inkludiert:</h4>
                   {[
                     'Analysegespräch',
@@ -139,6 +137,11 @@ export default function InvestitionPage() {
                       <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
+                </div>
+
+                <div className="text-center mt-8 pt-6 border-t border-gray-200">
+                  <div className="text-xl font-bold text-[#0A2540] mb-1">1.500€ zzgl. MwSt.</div>
+                  <p className="text-sm text-gray-600">je Position</p>
                 </div>
               </div>
 
