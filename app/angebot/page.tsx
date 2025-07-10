@@ -202,7 +202,7 @@ export default function InvestitionPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: 'Foto / Videoshooting vor Ort',
@@ -232,12 +232,12 @@ export default function InvestitionPage() {
                   )
                 }
               ].map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                <div key={index} className="bg-gray-50 rounded-xl p-10 hover:shadow-lg transition-shadow duration-300 min-h-[280px] flex flex-col">
                   <div className="w-16 h-16 bg-[#0A2540] text-white rounded-full flex items-center justify-center mb-6">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-[#0A2540] mb-4">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                  <p className="text-gray-600 leading-relaxed flex-grow">{service.description}</p>
                 </div>
               ))}
             </div>
