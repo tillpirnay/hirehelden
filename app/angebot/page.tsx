@@ -94,69 +94,82 @@ export default function InvestitionPage() {
       {/* Investment Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-6">
-                Investition für die Gewinnung eines Mitarbeiters
+                Unsere Angebotspakete
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Transparente Preisgestaltung für maximalen Erfolg bei der Personalgewinnung
+                Wählen Sie das passende Paket für Ihre Personalgewinnung
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              {/* Setup Costs */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-t-4 border-[#0A2540] flex flex-col">
+            <div className="grid lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+              {/* Paket 1 - HireFlat */}
+              <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#0A2540] flex flex-col relative">
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-[#0A2540] text-white rounded-full mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0A2540] mb-4">HireHelden Performance Paket</h3>
+                  <h3 className="text-2xl font-bold text-[#0A2540] mb-2">Paket 1 - HireFlat</h3>
+                  <p className="text-gray-600">Planbare Kosten mit monatlicher Pauschale</p>
                 </div>
 
-                <div className="space-y-4 flex-grow">
-                  <h4 className="font-semibold text-[#0A2540] mb-4">Folgendes ist inkludiert:</h4>
-                  {[
-                    'Erstanalysegespräch',
-                    'Karriereseite',
-                    'Erstellung einer professionellen Jobanzeige',
-                    'Job-Landingpages',
-                    'Social Media Ads für Performance Marketing',
-                    'Telefonische Vorqualifizierung der Bewerbenden',
-                    'Werbekosten für die Schaltung der Werbung auf Meta & Co. für die ersten 30 Tage inkludiert'
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                        <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">{item}</span>
+                <div className="space-y-6 flex-grow">
+                  <div className="bg-gray-50 rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-lg font-semibold text-[#0A2540]">Setup Kosten je Standort</span>
+                      <span className="text-2xl font-bold text-[#0A2540]">2.000€</span>
                     </div>
-                  ))}
-                </div>
+                    <p className="text-gray-600">zzgl. MwSt.</p>
+                  </div>
 
-                <div className="text-center mt-8 pt-6 border-t border-gray-200">
-                  <div className="text-xl font-bold text-[#0A2540] mb-1">1.500€ zzgl. MwSt.</div>
-                  <p className="text-sm text-gray-600">je Position</p>
+                  <div className="bg-blue-50 rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-lg font-semibold text-[#0A2540]">Monatliche Optimierungspauschale</span>
+                      <span className="text-2xl font-bold text-blue-600">1.000€</span>
+                    </div>
+                    <p className="text-gray-600">zzgl. MwSt.</p>
+                  </div>
+
+                  <div className="bg-green-50 rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-lg font-semibold text-[#0A2540]">Mindestvertragslaufzeit</span>
+                      <span className="text-2xl font-bold text-green-600">1 Monat</span>
+                    </div>
+                    <p className="text-gray-600">Flexibel kündbar</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Success-based Pricing */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-t-4 border-blue-500">
+              {/* Paket 2 - Win & Hire */}
+              <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-blue-500 flex flex-col relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    Beliebt
+                  </div>
+                </div>
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-full mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0A2540] mb-4">Erfolgsbasierte Vergütung</h3>
-                  <p className="text-gray-600">Nur bei erfolgreicher Vermittlung</p>
+                  <h3 className="text-2xl font-bold text-[#0A2540] mb-2">Paket 2 - Win & Hire</h3>
+                  <p className="text-gray-600">Kein Risiko - nur bei Erfolg zahlen</p>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-6 flex-grow">
+                  <div className="bg-green-50 rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-lg font-semibold text-[#0A2540]">Setup Kosten</span>
+                      <span className="text-2xl font-bold text-green-600">0€</span>
+                    </div>
+                    <p className="text-gray-600">Kostenloser Start</p>
+                  </div>
+
                   <div className="bg-blue-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-semibold text-[#0A2540]">Bei erfolgreicher Vermittlung</span>
@@ -165,16 +178,16 @@ export default function InvestitionPage() {
                     <p className="text-gray-600">des Jahresgehalts</p>
                   </div>
 
-                  <div className="bg-green-50 rounded-xl p-6">
+                  <div className="bg-gray-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-lg font-semibold text-[#0A2540]">Ab der 2. gleichen Position</span>
-                      <span className="text-2xl font-bold text-green-600">14%</span>
+                      <span className="text-lg font-semibold text-[#0A2540]">Mindestvertragslaufzeit</span>
+                      <span className="text-2xl font-bold text-gray-600">1 Monat</span>
                     </div>
-                    <p className="text-gray-600">des Jahresgehalts</p>
+                    <p className="text-gray-600">Flexibel kündbar</p>
                   </div>
                 </div>
 
-                <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                   <div className="flex items-center space-x-2 text-[#0A2540]">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
@@ -182,7 +195,7 @@ export default function InvestitionPage() {
                     <span className="font-semibold">Kein Risiko für Sie</span>
                   </div>
                   <p className="text-sm text-gray-600 mt-1">
-                    Sie zahlen nur bei erfolgreicher Vermittlung einer qualifizierten Fachkraft
+                    Sie zahlen nur bei erfolgreicher Vermittlung
                   </p>
                 </div>
               </div>
