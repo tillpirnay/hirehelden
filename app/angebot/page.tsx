@@ -65,7 +65,7 @@ export default function InvestitionPage() {
   return (
     <main className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0A2540] to-[#0A2540]/90 text-white py-20 md:py-32">
+      <section className="bg-gradient-to-br from-[#0A2540] to-[#0A2540]/90 text-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
@@ -92,27 +92,30 @@ export default function InvestitionPage() {
       </section>
 
       {/* Investment Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-6">
                 Unsere Leistungen
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Wählen Sie die passende Leistung für Ihre Personalgewinnung
               </p>
+              <p className="text-sm text-gray-500 mt-4">
+                * Alle Preise verstehen sich zzgl. gesetzlicher MwSt.
+              </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
               {/* Paket 1 - HireFlat */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#0A2540] flex flex-col relative">
+              <div className="bg-white rounded-2xl shadow-xl p-6 border-t-4 border-[#0A2540] flex flex-col relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <div className="bg-[#0A2540] text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Beliebt
                   </div>
                 </div>
-                <div className="text-center mb-8">
+                <div className="text-center mb-5">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-[#0A2540] text-white rounded-full mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -122,21 +125,19 @@ export default function InvestitionPage() {
                   <p className="text-gray-600">Monatlicher Pauschalpreis für Kampagnenbetreuung und -optimierung</p>
                 </div>
 
-                <div className="space-y-6 flex-grow">
+                <div className="space-y-3 flex-grow">
                   <div className="bg-gray-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-semibold text-[#0A2540]">Setup Kosten je Standort</span>
-                      <span className="text-2xl font-bold text-[#0A2540]">2.000€</span>
+                      <span className="text-2xl font-bold text-[#0A2540]">2.000€*</span>
                     </div>
-                    <p className="text-gray-600">zzgl. gesetzlicher MwSt.</p>
                   </div>
 
                   <div className="bg-blue-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-semibold text-[#0A2540]">Monatliche Kampagnenbetreuung</span>
-                      <span className="text-2xl font-bold text-blue-600">1.000€</span>
+                      <span className="text-2xl font-bold text-blue-600">1.000€*</span>
                     </div>
-                    <p className="text-gray-600">zzgl. gesetzlicher MwSt.</p>
                   </div>
 
                   <div className="bg-green-50 rounded-xl p-6">
@@ -155,6 +156,16 @@ export default function InvestitionPage() {
                     <p className="text-gray-600">Je nach Standort, Position und Dringlichkeit</p>
                   </div>
 
+                  <div className="bg-green-100 rounded-xl p-6">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-lg font-semibold text-[#0A2540]">Unbegrenzte Einstellungen</span>
+                    </div>
+                    <p className="text-gray-600">Egal wie viele Personen Sie einstellen - der Preis bleibt gleich.</p>
+                  </div>
+
                   <div className="bg-yellow-50 rounded-xl p-6">
                     <div className="flex items-center space-x-3 mb-2">
                       <svg className="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
@@ -168,8 +179,8 @@ export default function InvestitionPage() {
               </div>
 
               {/* Paket 2 - Win & Hire */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-blue-500 flex flex-col relative">
-                <div className="text-center mb-8">
+              <div className="bg-white rounded-2xl shadow-xl p-6 border-t-4 border-blue-500 flex flex-col relative">
+                <div className="text-center mb-5">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-full mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -179,7 +190,7 @@ export default function InvestitionPage() {
                   <p className="text-gray-600">100% Risiko bei HireHelden - Sie zahlen nur bei erfolgreicher Einstellung</p>
                 </div>
 
-                <div className="space-y-6 flex-grow">
+                <div className="space-y-3 flex-grow">
                   <div className="bg-green-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-semibold text-[#0A2540]">Setup Kosten</span>
@@ -191,9 +202,8 @@ export default function InvestitionPage() {
                   <div className="bg-blue-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-semibold text-[#0A2540]">Pro eingestellte Person</span>
-                      <span className="text-2xl font-bold text-blue-600">6.000€</span>
+                      <span className="text-2xl font-bold text-blue-600">6.000€*</span>
                     </div>
-                    <p className="text-gray-600">zzgl. gesetzlicher MwSt.</p>
                   </div>
 
                   <div className="bg-gray-50 rounded-xl p-6">
@@ -229,11 +239,46 @@ export default function InvestitionPage() {
         </div>
       </section>
 
+      {/* Package Summary */}
+      <section className="py-8 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+              <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-8 h-8 bg-[#0A2540] text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      1
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#0A2540]">HireFlat</h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Bei der HireFlat wird ein monatlicher Pauschalpreis zur Kampagnenbetreuung und -optimierung berechnet, dabei ist es egal, wie viele der bewerbenden Personen eingestellt werden. Die Bewerbenden werden durch einen unserer Consultants vorqualifiziert, bevor wir sie an Sie weiterleiten.
+                  </p>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      2
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#0A2540]">Win & Hire</h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Bei Win & Hire liegt das Risiko zu 100% bei HireHelden, je Bewerber, der eingestellt wird, wird eine Erfolgsprovision von 6.000€ fällig.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Additional Services */}
-      <section className="py-20 bg-white">
+      <section className="py-8 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-6">
                 Weitere Leistungen
               </h2>
@@ -289,7 +334,7 @@ export default function InvestitionPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-6">
                 Unsere Branchen
               </h2>
@@ -321,7 +366,7 @@ export default function InvestitionPage() {
       <section id="kontakt" className="py-20 bg-[#0A2540] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Jetzt unverbindliches Beratungsgespräch vereinbaren
               </h2>
