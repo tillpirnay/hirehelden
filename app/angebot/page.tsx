@@ -162,7 +162,7 @@ export default function InvestitionPage() {
                       </svg>
                       <span className="text-lg font-semibold text-[#0A2540]">Vorqualifizierung inklusive</span>
                     </div>
-                    <p className="text-gray-600">Bewerbende werden durch unsere Consultants vorqualifiziert, bevor wir sie an Sie weiterleiten</p>
+                    <p className="text-gray-600">Bewerbende werden durch unsere Consultants vorqualifiziert, bevor wir sie an Sie weiterleiten.</p>
                   </div>
                 </div>
               </div>
