@@ -26,12 +26,11 @@ export default function MobileMenu() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { 
-      name: 'Angebot', 
+      name: 'Branchen', 
       href: '/angebot',
       subLinks: [
-        { name: 'Alle Pakete', href: '/angebot' },
-        { name: 'Für Handwerk', href: '/handwerk' },
-        { name: 'Für Gesundheitswesen', href: '/gesundheitswesen' }
+        { name: 'Handwerk', href: '/handwerk' },
+        { name: 'Gesundheitswesen', href: '/gesundheitswesen' }
       ]
     },
     { 
@@ -39,6 +38,7 @@ export default function MobileMenu() {
       href: '/ueber-uns',
       subLinks: [
         { name: 'Über uns', href: '/ueber-uns' },
+        { name: 'Unsere Leistungen', href: '/angebot' },
         { name: 'Für Unternehmen', href: '/kunden' },
         { name: 'Für Bewerber', href: '/bewerber' }
       ]

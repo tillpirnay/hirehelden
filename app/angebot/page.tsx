@@ -97,10 +97,10 @@ export default function InvestitionPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-6">
-                Unsere Angebotspakete
+                Unsere Leistungen
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Wählen Sie das passende Paket für Ihre Personalgewinnung
+                Wählen Sie die passende Leistung für Ihre Personalgewinnung
               </p>
             </div>
 
