@@ -35,20 +35,6 @@ export default function HeroSection() {
                 />
               </div>
 
-              <div className="mt-8 sm:mt-12 grid grid-cols-3 gap-2 sm:gap-8">
-                <div>
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold">250+</div>
-                  <div className="text-xs sm:text-sm md:text-base text-mineral-gray-200">Erfolgreiche Vermittlungen</div>
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold">14 Tage</div>
-                  <div className="text-xs sm:text-sm md:text-base text-mineral-gray-200">Bis zum ersten Bewerber</div>
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold">100%</div>
-                  <div className="text-xs sm:text-sm md:text-base text-mineral-gray-200">Auf Erfolgsbasis</div>
-                </div>
-              </div>
             </div>
 
             <div className="relative h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] mt-4 lg:mt-0">

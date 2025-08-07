@@ -147,6 +147,14 @@ export default function InvestitionPage() {
                     <p className="text-gray-600">Flexibel kündbar</p>
                   </div>
                   
+                  <div className="bg-purple-50 rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-lg font-semibold text-[#0A2540]">Monatliche Werbeausgaben</span>
+                      <span className="text-2xl font-bold text-purple-600">individuell</span>
+                    </div>
+                    <p className="text-gray-600">Je nach Standort, Position und Dringlichkeit</p>
+                  </div>
+
                   <div className="bg-yellow-50 rounded-xl p-6">
                     <div className="flex items-center space-x-3 mb-2">
                       <svg className="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
@@ -194,6 +202,14 @@ export default function InvestitionPage() {
                       <span className="text-2xl font-bold text-gray-600">1 Monat</span>
                     </div>
                     <p className="text-gray-600">Flexibel kündbar</p>
+                  </div>
+                  
+                  <div className="bg-purple-50 rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-lg font-semibold text-[#0A2540]">Monatliche Werbeausgaben</span>
+                      <span className="text-2xl font-bold text-purple-600">individuell</span>
+                    </div>
+                    <p className="text-gray-600">Je nach Standort, Position und Dringlichkeit</p>
                   </div>
                   
                   <div className="bg-yellow-50 rounded-xl p-6">
