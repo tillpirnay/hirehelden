@@ -129,14 +129,14 @@ export default function InvestitionPage() {
                   <div className="bg-gray-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-semibold text-[#0A2540]">Setup Kosten je Standort</span>
-                      <span className="text-2xl font-bold text-[#0A2540]">2.000€*</span>
+                      <span className="text-2xl font-bold text-[#0A2540]">2.000€<sup>*</sup></span>
                     </div>
                   </div>
 
                   <div className="bg-blue-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-semibold text-[#0A2540]">Monatliche Kampagnenbetreuung</span>
-                      <span className="text-2xl font-bold text-blue-600">1.000€*</span>
+                      <span className="text-2xl font-bold text-blue-600">1.000€<sup>*</sup></span>
                     </div>
                   </div>
 
@@ -201,8 +201,8 @@ export default function InvestitionPage() {
 
                   <div className="bg-blue-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-lg font-semibold text-[#0A2540]">Pro eingestellte Person</span>
-                      <span className="text-2xl font-bold text-blue-600">6.000€*</span>
+                      <span className="text-lg font-semibold text-[#0A2540]">Pro eingestellter Person</span>
+                      <span className="text-2xl font-bold text-blue-600">6.000€<sup>*</sup></span>
                     </div>
                   </div>
 
