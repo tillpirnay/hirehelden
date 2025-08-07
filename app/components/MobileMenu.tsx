@@ -25,9 +25,23 @@ export default function MobileMenu() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Referenzen', href: '/referenzen' },
-    { name: 'Über uns', href: '/ueber-uns' },
-    { name: 'Für Unternehmen', href: '/kunden' },
+    { 
+      name: 'Angebot', 
+      href: '/angebot',
+      subLinks: [
+        { name: 'Alle Pakete', href: '/angebot' },
+        { name: 'Für Handwerk', href: '/handwerk' }
+      ]
+    },
+    { 
+      name: 'Über uns', 
+      href: '/ueber-uns',
+      subLinks: [
+        { name: 'Über uns', href: '/ueber-uns' },
+        { name: 'Für Unternehmen', href: '/kunden' },
+        { name: 'Für Bewerber', href: '/bewerber' }
+      ]
+    },
     { name: 'Kontakt', href: '/#contact' },
   ];
 
@@ -91,14 +105,29 @@ export default function MobileMenu() {
         <div className="px-2 py-4 h-full overflow-y-auto">
           <nav className="space-y-1">
             {navLinks.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                className="block px-4 py-3 text-base font-medium text-base-darkgray hover:bg-secondary-light hover:text-primary rounded-lg transition-colors duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
+              <div key={index}>
+                <Link
+                  href={link.href}
+                  className="block px-4 py-3 text-base font-medium text-base-darkgray hover:bg-secondary-light hover:text-primary rounded-lg transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+                {link.subLinks && (
+                  <div className="ml-4 space-y-1">
+                    {link.subLinks.map((subLink, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        href={subLink.href}
+                        className="block px-4 py-2 text-sm text-gray-600 hover:bg-secondary-light hover:text-primary rounded-lg transition-colors duration-200"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {subLink.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
           

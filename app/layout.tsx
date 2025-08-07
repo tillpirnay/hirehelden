@@ -9,6 +9,7 @@ import "@fontsource/montserrat/800.css";
 import type { Metadata } from "next";
 import "./globals.css";
 import MobileMenu from "./components/MobileMenu";
+import DesktopNav from "./components/DesktopNav";
 import Link from "next/link";
 import Image from "next/image";
 import { Inter, Montserrat } from "next/font/google";
@@ -58,7 +59,7 @@ export default function RootLayout({
         <div className="min-h-screen flex flex-col">
           <header className="bg-white shadow-soft sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex justify-between items-center py-3 sm:py-4">
+              <div className="flex items-center py-3 sm:py-4">
                 <Link href="/" className="flex items-center -ml-4 sm:-ml-6">
                   <Image
                     src="/logo.svg"
@@ -70,15 +71,11 @@ export default function RootLayout({
                   />
                 </Link>
                 
-                <nav className="hidden md:flex space-x-6 lg:space-x-8">
-                  <Link href="/" className="text-base-darkgray hover:text-primary font-medium transition-colors duration-200">Home</Link>
-                  <Link href="/referenzen" className="text-base-darkgray hover:text-primary font-medium transition-colors duration-200">Referenzen</Link>
-                  <Link href="/ueber-uns" className="text-base-darkgray hover:text-primary font-medium transition-colors duration-200">Über uns</Link>
-                  <Link href="/kunden" className="text-base-darkgray hover:text-primary font-medium transition-colors duration-200">Für Unternehmen</Link>
-                  <Link href="/bewerber" className="text-base-darkgray hover:text-primary font-medium transition-colors duration-200">Für Bewerber</Link>
-                </nav>
+                <div className="flex-1"></div>
                 
-                <div className="hidden md:flex">
+                <DesktopNav />
+                
+                <div className="hidden md:flex ml-6 lg:ml-8">
                   <Link href="/#contact" className="btn btn-primary">
                     Kontakt
                   </Link>
@@ -119,7 +116,8 @@ export default function RootLayout({
                   <h4 className="text-lg font-bold mb-3 sm:mb-4">Navigation</h4>
                   <ul className="space-y-2">
                     <li><Link href="/" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Home</Link></li>
-                    <li><Link href="/referenzen" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Referenzen</Link></li>
+                    <li><Link href="/angebot" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Angebot</Link></li>
+                    <li><Link href="/handwerk" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base pl-4">- Für Handwerk</Link></li>
                     <li><Link href="/ueber-uns" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Über uns</Link></li>
                     <li><Link href="/kunden" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Für Unternehmen</Link></li>
                     <li><Link href="/bewerber" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Für Bewerber</Link></li>
