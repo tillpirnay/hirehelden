@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { writeFile } from 'fs/promises';
+import path from 'path';
 
 const RECIPIENTS = ['t.pirnay85@googlemail.com'];
 const CC_RECIPIENT = 'felix.schulze@why-worry.eu';
@@ -12,15 +14,52 @@ export async function POST(request: Request) {
       throw new Error('Email configuration is missing');
     }
 
-    const data = await request.json();
-    const { name, company, email, phone, industry, message } = data;
+    // Handle form data (supports both JSON and FormData)
+    let data: any;
+    let attachments: any[] = [];
+    
+    const contentType = request.headers.get('content-type');
+    
+    if (contentType?.includes('multipart/form-data')) {
+      // Handle FormData (Bewerber form with file upload)
+      const formData = await request.formData();
+      data = {};
+      
+      for (const [key, value] of formData.entries()) {
+        if (key === 'cv' && value instanceof File) {
+          // Handle CV file
+          const buffer = Buffer.from(await value.arrayBuffer());
+          attachments.push({
+            filename: value.name,
+            content: buffer,
+            contentType: value.type,
+          });
+        } else {
+          data[key] = value.toString();
+        }
+      }
+    } else {
+      // Handle JSON (regular company form)
+      data = await request.json();
+    }
 
-    // Validate required fields
-    if (!name || !company || !email || !phone || !industry) {
-      return NextResponse.json(
-        { error: 'Bitte füllen Sie alle Pflichtfelder aus.' },
-        { status: 400 }
-      );
+    const { type, name, company, email, phone, industry, position, experience, message } = data;
+
+    // Validate required fields based on form type
+    if (type === 'bewerber') {
+      if (!name || !email || !position || !experience) {
+        return NextResponse.json(
+          { error: 'Bitte füllen Sie alle Pflichtfelder aus.' },
+          { status: 400 }
+        );
+      }
+    } else {
+      if (!name || !company || !email || !phone || !industry) {
+        return NextResponse.json(
+          { error: 'Bitte füllen Sie alle Pflichtfelder aus.' },
+          { status: 400 }
+        );
+      }
     }
 
     // Create transporter
@@ -42,13 +81,47 @@ export async function POST(request: Request) {
       throw new Error('Email configuration is invalid');
     }
 
-    // Email content
-    const mailOptions = {
-      from: process.env.GMAIL_USER,
-      to: RECIPIENTS.join(', '),
-      cc: CC_RECIPIENT,
-      subject: `Neue Kontaktanfrage von ${name} - ${company}`,
-      text: `
+    // Email content based on form type
+    let mailOptions: any;
+    
+    if (type === 'bewerber') {
+      // Bewerber email
+      mailOptions = {
+        from: process.env.GMAIL_USER,
+        to: RECIPIENTS.join(', '),
+        cc: CC_RECIPIENT,
+        subject: `Neue Bewerber-Registrierung: ${name} - ${position}`,
+        text: `
+Name: ${name}
+E-Mail: ${email}
+Telefon: ${phone || 'Nicht angegeben'}
+Gewünschte Position: ${position}
+Berufserfahrung: ${experience}
+
+Nachricht:
+${message || 'Keine Nachricht angegeben'}
+        `,
+        html: `
+<h2>Neue Bewerber-Registrierung</h2>
+<p><strong>Name:</strong> ${name}</p>
+<p><strong>E-Mail:</strong> ${email}</p>
+<p><strong>Telefon:</strong> ${phone || 'Nicht angegeben'}</p>
+<p><strong>Gewünschte Position:</strong> ${position}</p>
+<p><strong>Berufserfahrung:</strong> ${experience}</p>
+<h3>Nachricht:</h3>
+<p>${message || 'Keine Nachricht angegeben'}</p>
+${attachments.length > 0 ? '<p><strong>Lebenslauf ist als Anhang beigefügt.</strong></p>' : ''}
+        `,
+        attachments: attachments
+      };
+    } else {
+      // Company email (existing functionality)
+      mailOptions = {
+        from: process.env.GMAIL_USER,
+        to: RECIPIENTS.join(', '),
+        cc: CC_RECIPIENT,
+        subject: `Neue Kontaktanfrage von ${name} - ${company}`,
+        text: `
 Name: ${name}
 Unternehmen: ${company}
 E-Mail: ${email}
@@ -57,8 +130,8 @@ Branche: ${industry}
 
 Nachricht:
 ${message || 'Keine Nachricht angegeben'}
-      `,
-      html: `
+        `,
+        html: `
 <h2>Neue Kontaktanfrage</h2>
 <p><strong>Name:</strong> ${name}</p>
 <p><strong>Unternehmen:</strong> ${company}</p>
@@ -67,8 +140,9 @@ ${message || 'Keine Nachricht angegeben'}
 <p><strong>Branche:</strong> ${industry}</p>
 <h3>Nachricht:</h3>
 <p>${message || 'Keine Nachricht angegeben'}</p>
-      `,
-    };
+        `,
+      };
+    }
 
     // Send email
     try {

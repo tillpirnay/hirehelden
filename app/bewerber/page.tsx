@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import ContactSection from '../components/ContactSection';
+import BewerberContactSection from '../components/BewerberContactSection';
 import ErstgespraechButton from '../components/ErstgespraechButton';
 
 export default function BewerberPage() {
@@ -170,7 +170,7 @@ export default function BewerberPage() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <ContactSection />
+            <BewerberContactSection />
           </div>
         </div>
       </section>

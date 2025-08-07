@@ -30,7 +30,8 @@ export default function MobileMenu() {
       href: '/angebot',
       subLinks: [
         { name: 'Alle Pakete', href: '/angebot' },
-        { name: 'Für Handwerk', href: '/handwerk' }
+        { name: 'Für Handwerk', href: '/handwerk' },
+        { name: 'Für Gesundheitswesen', href: '/gesundheitswesen' }
       ]
     },
     { 

@@ -21,14 +21,6 @@ export default function DesktopNav() {
     }, 150);
   };
 
-  useEffect(() => {
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, []);
-
   const [isAngebotDropdownOpen, setIsAngebotDropdownOpen] = useState(false);
   const angebotDropdownRef = useRef<HTMLDivElement>(null);
   const angebotTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -48,6 +40,9 @@ export default function DesktopNav() {
 
   useEffect(() => {
     return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
       if (angebotTimeoutRef.current) {
         clearTimeout(angebotTimeoutRef.current);
       }
@@ -71,7 +66,7 @@ export default function DesktopNav() {
           </svg>
         </button>
         
-        <div className={`absolute top-full right-0 mt-1 w-48 bg-white rounded-lg shadow-lg border transition-all duration-200 z-50 ${
+        <div className={`absolute top-full right-0 mt-1 w-52 bg-white rounded-lg shadow-lg border transition-all duration-200 z-[100] ${
           isAngebotDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
         }`}>
           <div className="py-2">
@@ -86,6 +81,12 @@ export default function DesktopNav() {
               className="block px-4 py-2 text-sm text-base-darkgray hover:bg-gray-50 hover:text-primary transition-colors duration-200"
             >
               Für Handwerk
+            </Link>
+            <Link 
+              href="/gesundheitswesen" 
+              className="block px-4 py-2 text-sm text-base-darkgray hover:bg-gray-50 hover:text-primary transition-colors duration-200"
+            >
+              Für Gesundheitswesen
             </Link>
           </div>
         </div>
@@ -104,7 +105,7 @@ export default function DesktopNav() {
           </svg>
         </button>
         
-        <div className={`absolute top-full right-0 mt-1 w-48 bg-white rounded-lg shadow-lg border transition-all duration-200 z-50 ${
+        <div className={`absolute top-full right-0 mt-1 w-52 bg-white rounded-lg shadow-lg border transition-all duration-200 z-[100] ${
           isDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
         }`}>
           <div className="py-2">
