@@ -107,6 +107,11 @@ export default function InvestitionPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
               {/* Paket 1 - HireFlat */}
               <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#0A2540] flex flex-col relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-[#0A2540] text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    Beliebt
+                  </div>
+                </div>
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-[#0A2540] text-white rounded-full mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +119,7 @@ export default function InvestitionPage() {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-[#0A2540] mb-2">Paket 1 - HireFlat</h3>
-                  <p className="text-gray-600">Planbare Kosten mit monatlicher Pauschale</p>
+                  <p className="text-gray-600">Monatlicher Pauschalpreis für Kampagnenbetreuung und -optimierung</p>
                 </div>
 
                 <div className="space-y-6 flex-grow">
@@ -123,15 +128,15 @@ export default function InvestitionPage() {
                       <span className="text-lg font-semibold text-[#0A2540]">Setup Kosten je Standort</span>
                       <span className="text-2xl font-bold text-[#0A2540]">2.000€</span>
                     </div>
-                    <p className="text-gray-600">zzgl. MwSt.</p>
+                    <p className="text-gray-600">zzgl. gesetzlicher MwSt.</p>
                   </div>
 
                   <div className="bg-blue-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-lg font-semibold text-[#0A2540]">Monatliche Optimierungspauschale</span>
+                      <span className="text-lg font-semibold text-[#0A2540]">Monatliche Kampagnenbetreuung</span>
                       <span className="text-2xl font-bold text-blue-600">1.000€</span>
                     </div>
-                    <p className="text-gray-600">zzgl. MwSt.</p>
+                    <p className="text-gray-600">zzgl. gesetzlicher MwSt.</p>
                   </div>
 
                   <div className="bg-green-50 rounded-xl p-6">
@@ -141,16 +146,21 @@ export default function InvestitionPage() {
                     </div>
                     <p className="text-gray-600">Flexibel kündbar</p>
                   </div>
+                  
+                  <div className="bg-yellow-50 rounded-xl p-6">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <svg className="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-lg font-semibold text-[#0A2540]">Vorqualifizierung inklusive</span>
+                    </div>
+                    <p className="text-gray-600">Bewerbende werden durch unsere Consultants vorqualifiziert, bevor wir sie an Sie weiterleiten</p>
+                  </div>
                 </div>
               </div>
 
               {/* Paket 2 - Win & Hire */}
               <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-blue-500 flex flex-col relative">
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    Beliebt
-                  </div>
-                </div>
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-full mb-4">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,7 +168,7 @@ export default function InvestitionPage() {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-[#0A2540] mb-2">Paket 2 - Win & Hire</h3>
-                  <p className="text-gray-600">Kein Risiko - nur bei Erfolg zahlen</p>
+                  <p className="text-gray-600">100% Risiko bei HireHelden - Sie zahlen nur bei erfolgreicher Einstellung</p>
                 </div>
 
                 <div className="space-y-6 flex-grow">
@@ -172,10 +182,10 @@ export default function InvestitionPage() {
 
                   <div className="bg-blue-50 rounded-xl p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-lg font-semibold text-[#0A2540]">Bei erfolgreicher Vermittlung</span>
-                      <span className="text-2xl font-bold text-blue-600">16%</span>
+                      <span className="text-lg font-semibold text-[#0A2540]">Pro eingestellte Person</span>
+                      <span className="text-2xl font-bold text-blue-600">6.000€</span>
                     </div>
-                    <p className="text-gray-600">des Jahresgehalts</p>
+                    <p className="text-gray-600">zzgl. gesetzlicher MwSt.</p>
                   </div>
 
                   <div className="bg-gray-50 rounded-xl p-6">
@@ -185,19 +195,18 @@ export default function InvestitionPage() {
                     </div>
                     <p className="text-gray-600">Flexibel kündbar</p>
                   </div>
+                  
+                  <div className="bg-yellow-50 rounded-xl p-6">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <svg className="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-lg font-semibold text-[#0A2540]">Vollständiges Risiko bei uns</span>
+                    </div>
+                    <p className="text-gray-600">HireHelden trägt das komplette Risiko der Kampagne. Sie zahlen nur bei erfolgreicher Einstellung.</p>
+                  </div>
                 </div>
 
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                  <div className="flex items-center space-x-2 text-[#0A2540]">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                    </svg>
-                    <span className="font-semibold">Kein Risiko für Sie</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">
-                    Sie zahlen nur bei erfolgreicher Vermittlung
-                  </p>
-                </div>
               </div>
             </div>
           </div>
