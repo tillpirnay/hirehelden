@@ -3,8 +3,7 @@ import nodemailer from 'nodemailer';
 import { writeFile } from 'fs/promises';
 import path from 'path';
 
-const RECIPIENTS = ['t.pirnay85@googlemail.com'];
-const CC_RECIPIENT = 'felix.schulze@why-worry.eu';
+const RECIPIENTS = ['info@hirehelden.de'];
 
 export async function POST(request: Request) {
   try {
@@ -54,7 +53,7 @@ export async function POST(request: Request) {
         );
       }
     } else {
-      if (!name || !company || !email || !phone || !industry) {
+      if (!name || !company || !email) {
         return NextResponse.json(
           { error: 'Bitte füllen Sie alle Pflichtfelder aus.' },
           { status: 400 }
@@ -89,7 +88,6 @@ export async function POST(request: Request) {
       mailOptions = {
         from: process.env.GMAIL_USER,
         to: RECIPIENTS.join(', '),
-        cc: CC_RECIPIENT,
         subject: `Neue Bewerber-Registrierung: ${name} - ${position}`,
         text: `
 Name: ${name}
@@ -119,14 +117,13 @@ ${attachments.length > 0 ? '<p><strong>Lebenslauf ist als Anhang beigefügt.</st
       mailOptions = {
         from: process.env.GMAIL_USER,
         to: RECIPIENTS.join(', '),
-        cc: CC_RECIPIENT,
         subject: `Neue Kontaktanfrage von ${name} - ${company}`,
         text: `
 Name: ${name}
 Unternehmen: ${company}
 E-Mail: ${email}
-Telefon: ${phone}
-Branche: ${industry}
+Telefon: ${phone || 'Nicht angegeben'}
+${industry ? `Branche: ${industry}` : ''}
 
 Nachricht:
 ${message || 'Keine Nachricht angegeben'}
@@ -136,8 +133,8 @@ ${message || 'Keine Nachricht angegeben'}
 <p><strong>Name:</strong> ${name}</p>
 <p><strong>Unternehmen:</strong> ${company}</p>
 <p><strong>E-Mail:</strong> ${email}</p>
-<p><strong>Telefon:</strong> ${phone}</p>
-<p><strong>Branche:</strong> ${industry}</p>
+<p><strong>Telefon:</strong> ${phone || 'Nicht angegeben'}</p>
+${industry ? `<p><strong>Branche:</strong> ${industry}</p>` : ''}
 <h3>Nachricht:</h3>
 <p>${message || 'Keine Nachricht angegeben'}</p>
         `,
