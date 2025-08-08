@@ -118,6 +118,7 @@ export default function RootLayout({
                     <li><Link href="/" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Home</Link></li>
                     <li><Link href="/angebot" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Angebot</Link></li>
                     <li><Link href="/handwerk" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base pl-4">- Für Handwerk</Link></li>
+                    <li><Link href="/gesundheitswesen" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base pl-4">- Für Gesundheitswesen</Link></li>
                     <li><Link href="/ueber-uns" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Über uns</Link></li>
                     <li><Link href="/kunden" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Für Unternehmen</Link></li>
                     <li><Link href="/bewerber" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base">Für Bewerber</Link></li>
